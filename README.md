@@ -208,11 +208,12 @@ Se o teste funcionar corretamente eu vos convido a criar mais cenários com o se
 * Abra o arquivo features/specifications/teste.feature
 * Adicione mais alguns cenários usando a estrutura:
 
+```bash
   Cenario:
   Dado
   Quando
   Então
-
+```
 * Execute o comando:
 
 ```bash
@@ -221,6 +222,7 @@ cucumber
 
 * Copie somente os steps gerados no console, exemplo:
 
+```bash
 Dado("que hj é sexta") do
 pending # Write code here that turns the phrase above into concrete actions
 end
@@ -232,6 +234,7 @@ end
 Então("eu vou estudar automacao de teste") do
 pending # Write code here that turns the phrase above into concrete actions
 end
+```
 
 Implemente os steps e seja feliz! Não deixe de treinar!
 Vou deixar aqui alguns códigos do capybara para facilitar o aprendizado!
@@ -246,34 +249,43 @@ visit 'https://site.com.br'
 
 <h4>Clique links e botões por id, texto ou nome</h4>
 
+```bash
 click_link('id-do-link')
 click_link('Texto do Link')
 click_link('nome_do_link')
+```
 
 
 <h4>Clica em um botão por id, texto ou nome</h4>
 
+```bash
 click_button('id-do-botao')
 click_button('Texto do botao')
 click_button('nome_do_botao')
+```
 
 <h4>Interagindo com Formulários</h4>
 
+```bash
 fill_in('nome_do_elemento', :with => 'valor')
 choose('nome_do_radio_button')
 check('nome_do_checkbox')
 uncheck('nome_do_checkbox')
 select('opção', :from => 'nome_do_combobox')
+```
 
 <h4>Buscar um elemento na página</h4>
 
+```bash
 find('#id')
 find('.class')
 find(:id, 'id_do_elemento')
 find(:xpath, 'xpath_do_elemento') find(:css, 'css_do_elemento')
+```
 
 <h4>Validações</h4>
 
+```bash
 assert_text('texto_que_deve_existir')
 assert_no_text('texto_que_não_deve_existir')
 has_xpath?('existe_xpath_do_elemento?')
@@ -284,6 +296,7 @@ should have_xpath('deve_existir_xpath_do_elemento')
 should have_css('deve_existir_css')
 should have_content('deve_existir_conteúdo')
 should have_no_content('não_deve_existir_conteúdo')
+```
 
 
 É isso aí pessoal! Espero ter ajudado! Deixarei meus contatos abaixo para qualquer dúvida.
