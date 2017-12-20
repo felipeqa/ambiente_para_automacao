@@ -137,8 +137,9 @@ O resultado é:
 
 Esse driver é o responsavel por gerenciar e abrir o nosso navegador quando executamos os testes!!!
 
-<h3>7.Instalando a gem bundle </h3>
+<h3>7.Instalando a gem Bundler </h3>
 
+Para mais informações: <https://github.com/bundler/bundler>
 No Console do Cmder, digite o comando:
 
 
@@ -286,7 +287,7 @@ find(:xpath, 'xpath_do_elemento') find(:css, 'css_do_elemento')
 <h4>Validações</h4>
 
 ```bash
-assert_text('texto_que_deve_existir')
+assert_text(texto_que_deve_existir)
 assert_no_text('texto_que_não_deve_existir')
 has_xpath?('existe_xpath_do_elemento?')
 has_css?('existe_css?')
