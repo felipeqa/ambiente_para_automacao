@@ -81,7 +81,7 @@ Como podemos ver na imagem abaixo, ele exibe o caminho em que o terminal foi ins
 * Agora vamos instalar o ruby em nosso ambiente, digite o seguinte comando (não esqueça de estar como administrador):
 
 ```bash
-choco install ruby
+choco install ruby --version 2.3.3
 ```
 
 * Confirme com "y" sempre que for solicitado.
@@ -119,7 +119,31 @@ O resultado é:
 ![Passo 9](readme_images/Picture9.jpg?raw=true)
 
 
-Não se preocupe com os Load Errors não afeta a nossa configuração!
+Agora vamos fazer a configuração manual para que o Ruby encontre esse versão do DevKit:
+
+```bash
+cd/
+cd tools\DevKit2\
+ruby dk.rb init
+
+```
+
+![Passo 9](readme_images/Picture12.jpg?raw=true)
+
+
+Agora vamos abrir o arquivo config.yml com um editor de texto e configurar o caminho do nosso Ruby:
+
+```bash
+notepad config.yml
+```
+
+Add a linha no arquivo config.yml:
+```bash
+- C:/tools/ruby23
+```
+
+![Passo 9](readme_images/Picture13.jpg?raw=true)
+
 
 <h3>6.Instalando o Chromedriver </h3>
 
@@ -149,7 +173,7 @@ gem install bundler
 
 Obs:
 
-* Para a instalação de novas gems não é nescessários estar em modo de administrador.
+* Para a instalação de novas gems não é necessários estar em modo de administrador.
 * Modo administrador é utilizado para executar o gerenciador de pacotes "Chocolatey"
 
 Clonando o repositório do git para execução dos teste
@@ -204,6 +228,10 @@ cucumber
 ```
 
 Se o teste funcionar corretamente eu vos convido a criar mais cenários com o seu editor de texto preferido (atom, sublime).
+
+Atom <https://atom.io/>.
+Sublime <https://www.sublimetext.com/3>
+VS Code <https://code.visualstudio.com/download>
 
 * Abra o projeto com o seu editor favorito:
 * Abra o arquivo features/specifications/teste.feature
